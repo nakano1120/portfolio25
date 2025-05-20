@@ -1,0 +1,95 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+  
+  /* フェードイン効果 */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  header {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 3vw 0;
+  }
+  
+  header h1 {
+    font-size: 4vw;
+    font-weight: 300;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    padding: 5vw;
+  }
+  
+  .portfolio-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #1f1f1f;
+    border-radius: 1vw;
+    overflow: hidden;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* ホバー時の拡大＆影の演出 */
+  .portfolio-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.8);
+  }
+  
+  .portfolio-item img {
+    width: 30vw;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .text {
+    padding: 3vw;
+    flex: 1;
+  }
+  
+  .text h2 {
+    font-size: 2.5vw;
+    margin: 0 0 1vw;
+    font-weight: 300;
+  }
+  
+  .text p {
+    font-size: 1.5vw;
+    margin: 0 0 2vw;
+  }
+  
+  .text a {
+    font-size: 1.5vw;
+    color: #7fdfff;
+    text-decoration: none;
+    border-bottom: 1px solid #7fdfff;
+  }
+  
+  /* スマートフォン対応 */
+  @media (max-width: 600px) {
+    .portfolio-item {
+      flex-direction: column;
+    }
+  
+    .portfolio-item img {
+      width: 100%;
+    }
+  
+    .text {
+      padding: 4vw;
+    }
+  }
+  
